@@ -29,6 +29,19 @@ Author: Ali Mousavi (ali.mousavi@gmail.com)
 Github: https://github.com/tuxitop/khayyamJS
 */
 
+// ==UserScript==
+// @name        khayyamJS
+// @namespace   http://alimsvi.ir/
+// @description changes the UI of the presented course list in the student portal of Khayyam university of Mashhad.
+// @include     http://stu.khayyam.ac.ir/strcss/ShowPresentedCourses.php
+// @version     0.1
+// @author      Ali Mousavi
+// @require     https://code.jquery.com/jquery-1.10.2.js
+// @require     https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
+// @grant       none
+// ==/UserScript==
+
+
 // define a course class.
 var Course = function(index, courseColArray) {
     /* the first element is the row index in html class and
