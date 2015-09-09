@@ -310,7 +310,7 @@ var createBody = function() {
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">' +
         '<link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/css/bootstrap-rtl.min.css">' +
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">' +
-        '<link rel="stylesheet" href="https://cdn.rawgit.com/tuxitop/khayyamJS/v1.1/style.css">'
+        '<link rel="stylesheet" href="https://cdn.rawgit.com/tuxitop/khayyamJS/v0.1.1/style.css">'
     );
 
     //navbar
