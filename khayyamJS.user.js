@@ -152,6 +152,10 @@ Course.prototype.addToPage = function () {
                     '<div class="col-xs-2 course-specs-heading">کد استاد:</div>' +
                     '<div class="col-xs-4 course-teacherID">' + this.teacherID + '</div>' +
                 '</div>' +
+                '<div class="row">' +
+                    '<div class="col-xs-2 course-specs-heading">وزن:</div>' +
+                    '<div class="col-xs-4 course-weight">' + this.weight[0] + ' واحد</div>' +
+                '</div>' +
             '</div>' +
             '<div class="col-sm-5 col-md-3 col-xs-12 course-table">' +
                 this.getTable() +
@@ -322,7 +326,7 @@ var createBody = function() {
                     '</ul>' +
                 '</div>' +
             '</div>' +
-            '<div class="about" id="about-container">' +
+            '<div class="about" id="about-container" style="display: none">' +
                 '<div class="container">' +
                     '<div class="row">' +
                         '<div class="col-md-6 col-sm-12">' +
