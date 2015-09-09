@@ -34,6 +34,46 @@ body {
     background-color: #55688A;
 }
 
+.navbar a:focus {
+    outline: none;
+}
+
+.navbar {
+    min-height: 30px;
+}
+
+.navbar-default {
+    background-color: rgb(62, 69, 101);
+}
+
+.navbar-brand {
+    color: #03FFF6 !important;
+}
+
+.navbar-brand > i {
+    color: rgb(255, 0, 18);
+    font-size: 24px;
+}
+
+.navbar-nav > li > a {
+    color: #FFF !important;
+}
+
+.navbar-nav > li > a:hover, .navbar-brand:hover {
+    color: #39B6A4 !important;
+}
+
+.navbar-nav > li.clicked {
+    background-color: #847EAA;
+}
+
+.about {
+    background-color: rgb(6, 32, 54);
+    background-color: rgba(6, 32, 54, 0.9);
+    color: #FFF;
+    display: none;
+}
+
 .jumbotron {
     background-color: #D9E5F5;
 }

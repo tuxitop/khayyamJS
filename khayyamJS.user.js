@@ -34,7 +34,7 @@ Github: https://github.com/tuxitop/khayyamJS
 // @namespace   http://alimsvi.ir/
 // @description changes the UI of the presented course list in the student portal of Khayyam university of Mashhad.
 // @include     http://stu.khayyam.ac.ir/strcss/ShowPresentedCourses.php
-// @version     0.1
+// @version     0.1.1
 // @author      Ali Mousavi
 // @require     https://code.jquery.com/jquery-1.10.2.js
 // @require     https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
@@ -300,12 +300,91 @@ var mkCourseArray = function() {
 var createBody = function() {
     // makes the page ready and creates the body of the page.
     $("center, style").remove();
+
+    // add necessary styleseets.
     $('head').append(
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">' +
         '<link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/css/bootstrap-rtl.min.css">' +
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">' +
         '<link rel="stylesheet" href="https://cdn.rawgit.com/tuxitop/khayyamJS/master/style.css">'
     );
+
+    //navbar
+    $("body").append(
+        '<nav class="navbar navbar-fixed-top">' +
+            '<div class="navbar-default">' +
+                '<div class="container">' +
+                    '<div class="navbar-header">' +
+                        '<a class="navbar-brand" href="#">khayyam<i>JS</i></a>' +
+                    '</div>' +
+                    '<ul class="nav navbar-nav navbar-left">' +
+                        '<li id="about-link"><a href="#">درباره</a></li>' +
+                    '</ul>' +
+                '</div>' +
+            '</div>' +
+            '<div class="about" id="about-container">' +
+                '<div class="container">' +
+                    '<div class="row">' +
+                        '<div class="col-md-6 col-sm-12">' +
+                            '<h3>هدف پروژه</h3>' +
+                            '<p>' +
+                                'خیام‌جی‌اس یک اسکریپت به زبان جاوااسکریپت است که ظاهر صفحه‌ی «درس‌های ارایه شده» ' +
+                                'در پرتال دانشجویی را تغییر داده و به شکلی کامل‌تر، زیباتر و با امکاناتی ' +
+                                'بیشتر تبدیل می‌کند؛ چرا که این صفحه یکی از مهم‌ترین صفحه‌هاییست که هر دانشجو ' +
+                                'پیش از انتخاب واحد به اطلاعات آن نیاز داشته و می‌بایست با دقت بررسی کند. این ' +
+                                'در حالی است که ظاهر پیش‌فرض صفحه کمکی به این موضوع نکرده و بیشتر باعث سردرگمی دانشجو خواهد شد.' +
+                            '</p>' +
+                        '</div>' +
+                        '<div class="col-md-6 col-sm-12">' +
+                            '<h3>راه‌های کمک به پروژه</h3>' +
+                            '<p>' +
+                                'پیشرفت این پروژه به شما بستگی دارد. من این پروژه را در وقت آزاد خود توسعه می‌دهم ' +
+                                'و بازخوردی که از شما دریافت می‌کنم مرا به ادامه‌ی پروژه‌ی ترغیب خواهد کرد. ' +
+                                'هر یک از کارهای زیر کمکی بزرگ محسوب شده و به ادامه‌ی روند توسعه‌ی این کد کمک خواهد کرد: ' +
+                                '<ol>' +
+                                    '<li>کمک‌های مالی</li>' +
+                                    '<li>گزارش مشکلات از طریق <a href="https://github.com/tuxitop/khayyamJS/issues">صفحه‌ی مشکلات پروژه در گیت‌هاب</a> و یا ارسال ای‌میل به آدرس ali.mousavi@gmail.com.</li>' +
+                                    '<li>پیشنهاد امکانات جدید از طریق <a href="https://github.com/tuxitop/khayyamJS/issues">صفحه‌ی پروژه در گیت‌هاب</a> و یا ارسال ای‌میل.</li>' +
+                                    '<li>کمک در توسعه‌ی اسکریپت.</li>' +
+                                '</ol>' +
+                            '</p>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="row">' +
+                        '<div class="col-md-6 col-sm-12">' +
+                            '<h3>دسترسی و مجوز</h3>' +
+                            '<p>' +
+                            'خیام‌جی‌اس توسط <a href="http://alimsvi.ir">علی موسوی</a> نوشته شده و در گیت‌هاب میزبانی می‌شود. ' +
+                            'این پروژه تحت مجوز MIT منتشر شده است (متن مجوز در صفحه‌ی گیت‌هاب پروژه و در فایل LICENSE موجود می‌باشد). ' +
+                            'استفاده از کدهای این پروژه در پروژه‌های دیگر با رعایت شرایط مجوز MIT آزاد می‌باشد.' +
+                            '</p>' +
+                            '<p>صفحه‌ی پروژه در گیت‌هاب: https://github.com/tuxitop/khayyamJS</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '</nav>'
+    );
+    $(".navbar-nav").data("size", "big");
+    $(window).scroll(function(event) {
+      if ( $(document).scrollTop() ) {
+        if ( $(".navbar-nav").data("size") === "big" ) {
+          $(".navbar-nav li a, .navbar-brand").animate({"padding": "3px 15px 0 15px", "height": "30px"});
+          $(".navbar-nav").data("size", "small");
+        }
+      }
+      else if ( $(".navbar-nav").data("size") === "small" ) {
+        $(".navbar-nav li a, .navbar-brand").animate({"padding": "15px 15px 10px 15px", "height": "50px"});
+        $(".navbar-nav").data("size", "big");
+       }
+    });
+    $('#about-link').click(function(event) {
+        event.preventDefault();
+        $('#about-container').slideToggle();
+        $('#about-link').toggleClass('clicked');
+    });
+
+    // the body
     $("body").append(
     '<div class="container">' +
         '<div class="jumbotron">' +
@@ -313,7 +392,9 @@ var createBody = function() {
         '</div>' +
     '</div>');
     $("body").append('<div class="container"><div class="course-list"></div></div>');
-    $("body").append('<div class="footer">Restyled by <a href="http://alimsvi.ir">Ali Mousavi</a></div>')
+
+    // footer
+    $("body").append('<div class="footer"><a href="https://github.com/tuxitop/khayyamJS">khayyam<i>JS</i></a> is created by <a href="http://alimsvi.ir">Ali Mousavi</a></div>');
 };
 
 
