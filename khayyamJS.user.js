@@ -34,7 +34,7 @@ Github: https://github.com/tuxitop/khayyamJS
 // @namespace   http://alimsvi.ir/
 // @description changes the UI of the presented course list in the student portal of Khayyam university of Mashhad.
 // @include     http://stu.khayyam.ac.ir/strcss/ShowPresentedCourses.php
-// @version     0.1.1
+// @version     0.1.2
 // @author      Ali Mousavi
 // @require     https://code.jquery.com/jquery-1.10.2.js
 // @require     https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
@@ -303,14 +303,15 @@ var mkCourseArray = function() {
 
 var createBody = function() {
     // makes the page ready and creates the body of the page.
-    $("center, style").remove();
+    $("center").prevAll("script").remove();
+    $("center, style, link").remove();
 
     // add necessary styleseets.
     $('head').append(
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">' +
         '<link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/css/bootstrap-rtl.min.css">' +
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">' +
-        '<link rel="stylesheet" href="https://cdn.rawgit.com/tuxitop/khayyamJS/v0.1.1/style.css">'
+        '<link rel="stylesheet" href="https://cdn.rawgit.com/tuxitop/khayyamJS/v0.1.2/style.css">'
     );
 
     //navbar
@@ -362,7 +363,7 @@ var createBody = function() {
                             'این پروژه تحت مجوز MIT منتشر شده است (متن مجوز در صفحه‌ی گیت‌هاب پروژه و در فایل LICENSE موجود می‌باشد). ' +
                             'استفاده از کدهای این پروژه در پروژه‌های دیگر با رعایت شرایط مجوز MIT آزاد می‌باشد.' +
                             '</p>' +
-                            '<p>صفحه‌ی پروژه در گیت‌هاب: https://github.com/tuxitop/khayyamJS</p>' +
+                            '<p>صفحه‌ی پروژه در گیت‌هاب: <a href="https://github.com/tuxitop/khayyamJS">https://github.com/tuxitop/khayyamJS</a></p>' +
                         '</div>' +
                     '</div>' +
                 '</div>' +
