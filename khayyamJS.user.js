@@ -34,7 +34,7 @@ Github: https://github.com/tuxitop/khayyamJS
 // @namespace   http://alimsvi.ir/
 // @description changes the UI of the presented course list in the student portal of Khayyam university of Mashhad.
 // @include     http://stu.khayyam.ac.ir/strcss/ShowPresentedCourses.php
-// @version     0.1.2
+// @version     0.1.3
 // @author      Ali Mousavi
 // @require     https://code.jquery.com/jquery-1.10.2.js
 // @require     https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
@@ -69,17 +69,23 @@ var Course = function(index, courseColArray) {
     var re_field = /رشته&nbsp;(مهندسی )?(.*?) دوره/;
     var re_degree = /<b>مقطع:<\/b> (.*?)<br>/g;
 	var re_bldg = /,ساختمان ?(\d)\)/g;
+    var re_exam = /امتحان روز:<\/b> ?(.*?) ?ساعت ?(\d+)/g;
 
     this.specs = re_specs.exec(courseColArray[1])[1];
     this.courseID = re_courseID.exec(courseColArray[1])[1];
     this.field = re_field.exec(courseColArray[1])[2];
     this.degree = re_degree.exec(courseColArray[1])[1];
+    this.examDay = "-";
+    this.examHour = "-";
+    if ( (examMatch = re_exam.exec(courseColArray[1])) !== null) {
+        this.examDay = examMatch[1];
+        this.examHour = examMatch[2];
+    }
+
     var bldgMatch = re_bldg.exec(courseColArray[1]);
+    this.bldg = "-";
 	if (bldgMatch !== null) {
 		this.bldg = bldgMatch[1];
-	}
-	else {
-		this.bldg = "-";
 	}
 
     this.fieldID = this.courseID.substr(0, 4);
@@ -102,14 +108,14 @@ Course.prototype.addToPage = function () {
             '<div class="col-sm-2 col-xs-9 course-title">' +
                 '<i class="fa fa-book"></i> ' + this.title +
             '</div>' +
-            '<div class="col-sm-3 col-xs-5 course-teacher">' +
+            '<div class="col-sm-2 col-xs-5 course-teacher">' +
                 '<i class="fa fa-user"></i> ' + this.teacher +
             '</div>' +
             '<div class="col-sm-3 col-xs-5 course-field">' +
                 '<i class="fa fa-graduation-cap"></i> ' + this.degree + " " + this.field +
             '</div>' +
-            '<div class="col-sm-1 col-xs-4 course-vacancy">' +
-                '<i class="fa fa-user-plus"></i> ' + this.stVacancy +
+            '<div class="col-sm-2 col-xs-4 course-vacancy">' +
+                '<i class="fa fa-user-plus"></i> ' + this.stSigned + " از " + this.stCapacity +
             '</div>' +
             '<div class="col-sm-1 col-xs-4 course-gender">' +
                 this.getGender()[1] +
@@ -139,6 +145,10 @@ Course.prototype.addToPage = function () {
                     '<div class="col-xs-4 course-gender">' + this.getGender()[2] + '</div>' +
                     '<div class="col-xs-2 course-specs-heading">ساختمان:</div>' +
                     '<div class="col-xs-4 course-bldg">' + this.bldg + '</div>' +
+                '</div>' +
+                '<div class="row">' +
+                    '<div class="col-xs-2 course-specs-heading">امتحان:</div>' +
+                    '<div class="col-xs-4 course-exam">' + this.examDay + " ساعت " + this.examHour + '</div>' +
                 '</div>' +
                 '<div class="row">' +
                     '<div class="col-xs-2 course-specs-heading">گروه:</div>' +
