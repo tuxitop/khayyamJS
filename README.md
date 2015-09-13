@@ -1,7 +1,7 @@
 # khayyamJS
-A user script written with javascript for changing the UI of the student portal of Khayyam university of Mashhad. It Currently only works on the "Presented course list"  page, which in my opinion is one of the most important pages, and the students usually spend a lot of their time in it.
+A user script written with JavaScript for changing the UI of the student portal of Khayyam university of Mashhad. It Currently only works on the "Presented course list"  page, which in my opinion is one of the most important pages, and the students usually spend a lot of their time in it.
 
-The default UI of the page is a disaster. It includes a simple table where clicking on each courseID opens a new popup in a new tab. This script completely rewrites the default view, and uses modern design elements for displaying the page.
+The default UI of the page is a disaster. It includes a simple table where clicking on each courseID opens a new pop-up in a new tab. This script completely rewrites the default view, and uses modern design elements for displaying the page.
 
 This is the default view **without using khayyamJS**:
 ![Screenshot whithout using khayyamJS](screenshots/screenshot-NOTkhayyamJS.png?raw=true)
@@ -14,18 +14,18 @@ This is what khayyamJS does:
 * Modern view of the page, using no \<table\> elements.
 * Shows each session in a very nice table.
 * Uses no popups. (with the power of JQuery)
+* Shows Course requirements.
 
 # How to install
 ## Firefox:
 1. Install [Greasmonkey](https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/).
-2. Navigate to khayyamJS.user.script on github and click on the "Raw" botton and Install the script. Alternetively use this [link](khayyamJS.user.js?raw=true) and click install.
+2. Navigate to khayyamJS.user.script on github and click on the "Raw" button and Install the script. Alternatively use this [link](khayyamJS.user.js?raw=true) and click install.
 
 ## Chrome:
 1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
-2. Navigate to khayyamJS.user.script on github and click on the "Raw" botton and Install the script. Alternetively use this [link](khayyamJS.user.js?raw=true) and click install.
+2. Navigate to khayyamJS.user.script on github and click on the "Raw" button and Install the script. Alternatively use this [link](khayyamJS.user.js?raw=true) and click install.
 
 # To do
-* Add support for course requirements.
 * Querying the courses.
 * Filtering the courses.
 * Selecting the courses and previewing the time sheet.

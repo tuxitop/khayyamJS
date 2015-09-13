@@ -34,7 +34,7 @@ Github: https://github.com/tuxitop/khayyamJS
 // @namespace   http://alimsvi.ir/
 // @description changes the UI of the presented course list in the student portal of Khayyam university of Mashhad.
 // @include     http://stu.khayyam.ac.ir/strcss/ShowPresentedCourses.php
-// @version     0.1.3
+// @version     0.2
 // @author      Ali Mousavi
 // @require     https://code.jquery.com/jquery-1.10.2.js
 // @require     https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js
@@ -90,6 +90,7 @@ var Course = function(index, courseColArray) {
 
     this.fieldID = this.courseID.substr(0, 4);
     this.sessionsArray = this.getSessionsArray();
+    this.reqsArray = this.getReqsArray();
 };
 
 Course.prototype.addToPage = function () {
@@ -149,6 +150,8 @@ Course.prototype.addToPage = function () {
                 '<div class="row">' +
                     '<div class="col-xs-2 course-specs-heading">امتحان:</div>' +
                     '<div class="col-xs-4 course-exam">' + this.examDay + " ساعت " + this.examHour + '</div>' +
+                    '<div class="col-xs-2 course-specs-heading">وزن:</div>' +
+                    '<div class="col-xs-4 course-weight">' + this.weight[0] + ' واحد</div>' +
                 '</div>' +
                 '<div class="row">' +
                     '<div class="col-xs-2 course-specs-heading">گروه:</div>' +
@@ -163,8 +166,8 @@ Course.prototype.addToPage = function () {
                     '<div class="col-xs-4 course-teacherID">' + this.teacherID + '</div>' +
                 '</div>' +
                 '<div class="row">' +
-                    '<div class="col-xs-2 course-specs-heading">وزن:</div>' +
-                    '<div class="col-xs-4 course-weight">' + this.weight[0] + ' واحد</div>' +
+                    '<div class="col-xs-2 course-specs-heading">وابستگی‌ها:</div>' +
+                    '<div class="col-xs-10 course-reqs"></div>' +
                 '</div>' +
             '</div>' +
             '<div class="col-sm-5 col-md-3 col-xs-12 course-table">' +
@@ -206,6 +209,23 @@ Course.prototype.addToPage = function () {
                 '<div class="row">' +
                     '<div class="col-sm-12 session-time">' +
                         session.day + ' ساعت ' + session.hour +
+                    '</div>' +
+                '</div>'
+            );
+        }
+    }
+
+    // Add Requirements to the specs.
+    if (!this.reqsArray.length) {
+        $("#" + this.id + " .course-reqs").text('-');
+    }
+    else {
+        for (var i = 0; i < this.reqsArray.length; i++) {
+            req = this.reqsArray[i];
+            $("#" + this.id + " .course-reqs").append(
+                '<div class="row">' +
+                    '<div class="col-sm-12 text-danger">' +
+                        req.title + ' (' + req.type + ')' +
                     '</div>' +
                 '</div>'
             );
@@ -257,6 +277,21 @@ Course.prototype.getSessionsArray = function() {
         sessionsArray.push(Session);
     }
     return sessionsArray;
+};
+Course.prototype.getReqsArray = function() {
+    reqsArray = [];
+    var re_reqs = /کد درس ?: ?(\d+?) نام درس: (.*?) تعداد واحد: ?(\d) ?\( ?(پیشنیاز|همنیاز)\) ?کد ?معادل ?: ?(-?\d+?)<\/li>/g;
+    var reMatch;
+    while ((reMatch = re_reqs.exec(this.specs)) !== null ) {
+        var Req = {};
+        Req.id = reMatch[1];
+        Req.title = reMatch[2];
+        Req.weight = reMatch[3];
+        Req.type = reMatch[4];
+        Req.altId = reMatch[5];
+        reqsArray.push(Req);
+    }
+    return reqsArray;
 };
 Course.prototype.getGender = function() {
     /*
@@ -321,7 +356,7 @@ var createBody = function() {
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">' +
         '<link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/css/bootstrap-rtl.min.css">' +
         '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">' +
-        '<link rel="stylesheet" href="https://cdn.rawgit.com/tuxitop/khayyamJS/v0.1.2/style.css">'
+        '<link rel="stylesheet" href="https://cdn.rawgit.com/tuxitop/khayyamJS/v0.2/style.css">'
     );
 
     //navbar
