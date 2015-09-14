@@ -77,6 +77,26 @@ body {
     background-color: #D9E5F5;
 }
 
+.query-panel {
+    background-color: #EEE;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.query-panel .query-header {
+    color: #000;
+}
+
+.query-title {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #3B559E;
+}
+
+.query-select {
+    padding: 3px 12px;
+}
+
 .fa-male {
     color: blue;
 }
@@ -117,7 +137,7 @@ body {
     margin: 0;
 }
 
-.panel {
+.course-list .panel {
     margin-bottom: 0;
 }
 

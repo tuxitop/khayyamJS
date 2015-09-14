@@ -434,13 +434,32 @@ var createBody = function() {
         $('#about-link').toggleClass('clicked');
     });
 
-    // the body
+    // the jumbotron
     $("body").append(
     '<div class="container">' +
         '<div class="jumbotron">' +
             '<h1 class="page-header text-center">فهرست درس‌های ارایه شده</h1>' +
         '</div>' +
     '</div>');
+
+    // Filter Part
+    $("body").append(
+        '<div class="container">' +
+            '<div class="panel panel-default query-panel">' +
+                '<div class="panel-body">' +
+                    '<h3 class="query-header">فیلتر درس‌ها:</h3>' +
+                    '<div class="row">' +
+                        '<div class="query-title col-xs-1">رشته: </div>' +
+                        '<select class="col-xs-11 col-sm-3 form-control query-select">' +
+                            '<option>همه رشته‌ها</option>' +
+                        '</select>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '</div>'
+    );
+
+    // coures list
     $("body").append('<div class="container"><div class="course-list"></div></div>');
 
     // footer
