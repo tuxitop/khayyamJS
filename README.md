@@ -12,22 +12,23 @@ This is what khayyamJS does:
 # Features
 * Responsive design using bootstrap and JQuery.
 * Modern view of the page, using no \<table\> elements.
+* Filtering the courses by field, gender, building, day and hour.
 * Shows each session in a very nice table.
-* Uses no popups. (with the power of JQuery)
+* Uses no pop-ups. (with the power of JQuery)
 * Shows Course requirements.
 
 # How to install
-## Firefox:
+## Mozilla Firefox:
 1. Install [Greasmonkey](https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/).
 2. Navigate to khayyamJS.user.script on github and click on the "Raw" button and Install the script. Alternatively use this [link](khayyamJS.user.js?raw=true) and click install.
 
-## Chrome:
+## Chromium / Google Chrome:
 1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
 2. Navigate to khayyamJS.user.script on github and click on the "Raw" button and Install the script. Alternatively use this [link](khayyamJS.user.js?raw=true) and click install.
 
 # To do
+* Display a warning when session closes.
 * Querying the courses.
-* Filtering the courses.
 * Selecting the courses and previewing the time sheet.
 
 # How to help
@@ -45,8 +46,10 @@ This is something I'm doing on my free time. Continuing to do so is mostly relat
 # امکانات
 * طراحی کاملا واکنش‌گرا (با استفاده از بوت‌استرپ و جی‌کوئری)
 * طراحی مدرن صفحه بدون استفاده از المان \<table\>
+* قابلیت فیلتر کردن کلاس‌ها بر اساس زمان، روز، رشته، جنسیت و ساختمان
 * نمایش ساعت کلاس در یک جدول زیبا
 * بدون نمایش پاپ‌آپ و نمایش تمام اطلاعات در یک صفحه.
+* نمایش وابستگی‌های دروس.
 
 # نحوه‌ی نصب
 ## فایرفاکس
@@ -58,9 +61,8 @@ This is something I'm doing on my free time. Continuing to do so is mostly relat
 2. نمایش فایل khayyamJS.user.js در گیت‌هاب و کلیک بر روی دکمه‌ی Raw و نصب اسکریپت. همچنین می‌توانید از [این لینک](khayyamJS.user.js?raw=true) استفاده کنید.
 
 # امکانات آینده
-* اضافه کردن امکان نمایش پیش‌نیاز/هم‌نیاز
+* نمایش اخطار به هنگام بسته‌شدن میزکار و ورود دوباره.
 * جستجو در دروس
-* فیلتر کردن دروس
 * انتخاب دورس و پیش‌نمایش جدول زمانی درس‌های انتخاب شده.
 
 # راه‌های کمک به پروژه:

@@ -1,3 +1,11 @@
+## 0.5 (30 Nov 2015)
+* Query courses
+* you can now query by field, building, gender, hours, days ...
+* Better performance and speed.
+* Shows a warning before loading a long list of courses.
+* Style fixes.
+* Bug fixes.
+
 ## 0.2 (13 Sep 2015)
 * Added exam day
 * Added exam hour

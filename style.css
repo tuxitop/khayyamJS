@@ -25,6 +25,8 @@ This is the style used with KhayyamJS.
 
 Author: Ali Mousavi (ali.mousavi@gmail.com)
 github: https://github.com/tuxitop/khayyamJS
+Last Updated: Nov 30th, 2015
+version: 0.5
 */
 
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
@@ -87,6 +89,11 @@ body {
     color: #000;
 }
 
+.query-panel .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .query-title {
     font-size: 18px;
     margin: 5px 0;
@@ -95,6 +102,21 @@ body {
 
 .query-select {
     padding: 3px 12px;
+}
+
+label {
+    margin-top: 8px;
+    padding-right: 2px !important;
+    padding-left: 10px !important;
+}
+
+input[type=checkbox] {
+    margin: 4px 4px 0;
+}
+
+.panel-warn {
+    background-color: #D9E5F5;
+    padding-bottom: 10px;
 }
 
 .fa-male {
@@ -118,6 +140,10 @@ body {
 
 .panel-default:nth-of-type(even) > .panel-heading {
     background-color: #FFF;
+}
+
+.panel-default:nth-of-type(odd) > .panel-body {
+    background-color: whitesmoke;
 }
 
 .course-specs {
