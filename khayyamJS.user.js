@@ -33,7 +33,7 @@ Github: https://github.com/tuxitop/khayyamJS
 // @name        khayyamJS
 // @namespace   http://alimsvi.ir/
 // @description changes the UI of the presented course list in the student portal of Khayyam university of Mashhad.
-// @include     https://pooya.khayyam.ac.ir/educ/stu_portal/PresentedCoursesForm.php
+// @include     http://stu.khayyam.ac.ir/strcss/ShowPresentedCourses.php
 // @version     0.6
 // @author      Ali Mousavi
 // @require     https://code.jquery.com/jquery-1.10.2.js
@@ -153,9 +153,9 @@ Page.prototype.updateFilters = function() {
 Page.prototype.updateGroups = function(faculty) {
   $.ajax({
     method: 'GET',
-    url: 'EduGrpSelect.php',
-    // url: './updateGroupsResponse.html'
-    data: { FacCode: faculty, SelName: '"EduGrp"' }
+    // url: 'EduGrpSelect.php',
+    url: './updateGroupsResponse.html'
+    // data: { FacCode: faculty, SelName: '"EduGrp"' }
   }).done(function(data) {
     var grpReg = /option value="(\d+)">(.+?)</g;
     var optionsArray = ['<option value="all">همه گروه‌های آموزشی</option>'];
@@ -395,16 +395,16 @@ Page.prototype.mkBody = function() {
 
   // Show Courses Button
   $('#update-courses-btn').click(function() {
+    // $.ajax({
+    //   method: 'POST',
+    //   data: {
+    //     FacCode: $('#faculty-select').val(),
+    //     EducGrp: $('#group-select').val(),
+    //     ShowBtn: 'نمایش'
+    //   }
     $.ajax({
-      method: 'POST',
-      data: {
-        FacCode: $('#faculty-select').val(),
-        EducGrp: $('#group-select').val(),
-        ShowBtn: 'نمایش'
-      }
-      // $.ajax({
-      //   method: 'GET',
-      //   url: './engineering.html'
+      method: 'GET',
+      url: './engineering.html'
     }).done(function(data) {
       that.updateInfo(data);
       $('.course-list')
