@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2015 Ali Mousavi
+Copyright (c) 2019 Ali Mousavi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

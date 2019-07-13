@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2015 Ali Mousavi
+Copyright (c) 2019 Ali Mousavi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -32,166 +32,168 @@ version: 0.5
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
 
 body {
-    font-family: 'Droid Arabic Naskh', serif;
-    background-color: #55688A;
+  font-family: 'Droid Arabic Naskh', serif;
+  background-color: #55688a;
 }
 
 .navbar a:focus {
-    outline: none;
+  outline: none;
 }
 
 .navbar {
-    min-height: 30px;
+  min-height: 30px;
 }
 
 .navbar-default {
-    background-color: rgb(62, 69, 101);
+  background-color: rgb(62, 69, 101);
 }
 
 .navbar-brand {
-    color: #03FFF6 !important;
+  color: #03fff6 !important;
 }
 
 .navbar-brand > i {
-    color: rgb(255, 0, 18);
-    font-size: 24px;
+  color: rgb(255, 0, 18);
+  font-size: 24px;
 }
 
 .navbar-nav > li > a {
-    color: #FFF !important;
+  color: #fff !important;
 }
 
-.navbar-nav > li > a:hover, .navbar-brand:hover {
-    color: #39B6A4 !important;
+.navbar-nav > li > a:hover,
+.navbar-brand:hover {
+  color: #39b6a4 !important;
 }
 
 .navbar-nav > li.clicked {
-    background-color: #847EAA;
+  background-color: #847eaa;
 }
 
 .about {
-    background-color: rgb(6, 32, 54);
-    background-color: rgba(6, 32, 54, 0.9);
-    color: #FFF;
+  background-color: rgb(6, 32, 54);
+  background-color: rgba(6, 32, 54, 0.9);
+  color: #fff;
 }
 
 .jumbotron {
-    background-color: #D9E5F5;
+  background-color: #d9e5f5;
 }
 
 .query-panel {
-    background-color: #EEE;
-    border: 1px solid #000;
-    box-shadow: 2px 2px 2px #000;
+  background-color: #eee;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 2px #000;
 }
 
 .query-panel .query-header {
-    color: #000;
+  color: #000;
 }
 
 .query-panel .row {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .query-title {
-    font-size: 18px;
-    margin: 5px 0;
-    color: #3B559E;
+  font-size: 18px;
+  margin: 5px 0;
+  color: #3b559e;
 }
 
 .query-select {
-    padding: 3px 12px;
+  padding: 3px 12px;
 }
 
 label {
-    margin-top: 8px;
-    padding-right: 2px !important;
-    padding-left: 10px !important;
+  margin-top: 8px;
+  padding-right: 2px !important;
+  padding-left: 10px !important;
 }
 
-input[type=checkbox] {
-    margin: 4px 4px 0;
+input[type='checkbox'] {
+  margin: 4px 4px 0;
 }
 
 .panel-warn {
-    background-color: #D9E5F5;
-    padding-bottom: 10px;
+  background-color: #d9e5f5;
+  padding-bottom: 10px;
 }
 
 .fa-male {
-    color: blue;
+  color: blue;
 }
 
 .fa-female {
-    color: #DB21CF;}
+  color: #db21cf;
+}
 
 .course-header:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .low-vacancy > .panel-heading {
-    background-color: #F8FA95 !important;
+  background-color: #f8fa95 !important;
 }
 
 .no-vacancy > .panel-heading {
-    background-color: #FA9494 !important;
+  background-color: #fa9494 !important;
 }
 
 .panel-default:nth-of-type(even) > .panel-heading {
-    background-color: #FFF;
+  background-color: #fff;
 }
 
 .panel-default:nth-of-type(odd) > .panel-body {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .course-specs {
-    display: none;
+  display: none;
 }
 
 .course-specs-heading {
-    color: #3B559E;
-    font-weight: bold;
+  color: #3b559e;
+  font-weight: bold;
 }
 
 .course-specs-left .row {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .course-sessions .row {
-    margin: 0;
+  margin: 0;
 }
 
 .course-list .panel {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .table-item {
-    height: 25px;
-    border: 1px solid #DDD;
-    font-size: 12px;
+  height: 25px;
+  border: 1px solid #ddd;
+  font-size: 12px;
 }
 
 .session-time {
-    padding: 0;
+  padding: 0;
 }
 
 .session-ew {
-    background-color: #352885;
+  background-color: #352885;
 }
 
 .session-eow {
-    background-color: #88BCC1;
+  background-color: #88bcc1;
 }
 
 .footer {
-    margin-top: 20px;
-    text-align: center;
-    height: 40px;
-    color: #FFF;
+  margin-top: 20px;
+  text-align: center;
+  height: 40px;
+  color: #fff;
 }
 
 .footer a {
-    color: rgb(39, 176, 78);
+  color: rgb(39, 176, 78);
 }
