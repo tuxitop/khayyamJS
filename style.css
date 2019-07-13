@@ -26,13 +26,11 @@ This is the style used with KhayyamJS.
 Author: Ali Mousavi (ali.mousavi@gmail.com)
 github: https://github.com/tuxitop/khayyamJS
 Last Updated: Nov 30th, 2015
-version: 0.5
+version: 0.6
 */
 
-@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
-
 body {
-  font-family: 'Droid Arabic Naskh', serif;
+  font-family: 'Noto Naskh Arabic', serif;
   background-color: #55688a;
 }
 
