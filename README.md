@@ -19,7 +19,7 @@ This is what khayyamJS does:
 
 # How to install
 ## Mozilla Firefox:
-1. Install [Greasmonkey](https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/).
+1. Install [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/).
 2. Navigate to khayyamJS.user.script on github and click on the "Raw" button and Install the script. Alternatively use this [link](khayyamJS.user.js?raw=true) and click install.
 
 ## Chromium / Google Chrome:
@@ -53,7 +53,7 @@ This is something I'm doing on my free time. Continuing to do so is mostly relat
 
 # نحوه‌ی نصب
 ## فایرفاکس
-1. نصب افزونه‌‌ی [گریزمانکی](https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/).
+1. نصب افزونه‌‌ی [تمپرمانکی](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/).
 2. نمایش فایل khayyamJS.user.js در گیت‌هاب و کلیک بر روی دکمه‌ی Raw و نصب اسکریپت. همچنین می‌توانید از [این لینک](khayyamJS.user.js?raw=true) استفاده کنید.
 
 # گوگل کروم

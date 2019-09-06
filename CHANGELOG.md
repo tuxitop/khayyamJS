@@ -1,3 +1,8 @@
+## 0.6 (July 13 2019)
+* Code cleanup
+* Compatibility with the new version of website
+* Bug fixes
+
 ## 0.5 (30 Nov 2015)
 * Query courses
 * you can now query by field, building, gender, hours, days ...
@@ -13,13 +18,13 @@
 * Reduced teacher name size on the bar.
 * Changed signed up student number.
 
-##0.1.2 (10 Sep 2015)
+## 0.1.2 (10 Sep 2015)
 * restyled and debuged the stylesheet.
 
-##0.1.1 (9 Sep 2012)
+## 0.1.1 (9 Sep 2012)
 * Added "about"
 * Added weight option for courses
 
-##0.1 (8 Sep 2015)
+## 0.1 (8 Sep 2015)
 * Initial release
 * Responsive design (Bootstrap, JQuery)
